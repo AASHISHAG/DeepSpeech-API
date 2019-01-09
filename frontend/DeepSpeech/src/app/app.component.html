@@ -1,0 +1,35 @@
+<div style="text-align:center">
+      <div class="container" style="border:1px solid #cecece;">
+         <p><img class="alignnone wp-image-309576 size-full" src="/assets/mozilla2.jpg" style="height: 300px; width: 600px;"></p>
+         <div class="mt-4 col-md-12">
+            <form name="recording">
+               <a (click)="initiateRecording()" class="btn btn-primary" style="color: aliceblue;"
+               *ngIf="!recording"> Start Recording </a> <i class="fas fa-microphone"></i>
+               <a (click)="stopRecording()" class="btn btn-danger" style="color: aliceblue;"
+               *ngIf="recording"> Stop Recording </a>
+               <div class="clearfix"></div>
+               <audio controls="" *ngIf="url">
+                  <source [src]="sanitize(url)" type="audio/wav">
+               </audio>
+            </form>
+         </div>
+         <div class="mt-4 col-md-12">
+            <p>
+               <label>OR</label>
+            </p>
+         </div>
+         <div class="mt-4 col-md-12">
+            <div class="form-group">
+               <label for="file">  Choose File  </label>
+               <input type="file" id="file" (change)="handleFileInput($event.target.files)">
+            </div>
+         </div>
+         <ngx-spinner></ngx-spinner>
+         <div class="mt-4 col-md-12">
+            <p>
+               <label>Text Output</label>
+            </p>
+         </div>
+         <textarea id = "myTextArea" class="col-lg-3 center-block" rows = "3" cols = "80"> {{text}} </textarea>
+      </div>
+   </div>

@@ -1,0 +1,5 @@
+#test{
+    width:100%;
+    background: url(src/assets/mozilla2.jpg) 50% 0 no-repeat fixed;
+    background-size:cover;
+}
