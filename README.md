@@ -2,6 +2,8 @@
 
 Project [DeepSpeech](https://github.com/mozilla/DeepSpeech) is an open source Speech-To-Text engine, using a model trained by machine learning techniques, based on [Baidu's Deep Speech research paper](https://arxiv.org/abs/1412.5567). Project DeepSpeech uses Google's [TensorFlow](https://www.tensorflow.org/) project to make the implementation easier.
 
+The intent of this project [DeepSpeech-API](https://github.com/AASHISHAG/DeepSpeech-API) is to enable the user to access DeepSpeech on a web browser. You can quickly install the dependencies on any platform (Windows/IOS/Linux) and start using it over the Web (Computer/Mobile).
+
 #### Installing DeepSpeech Python bindings
 
 ```
