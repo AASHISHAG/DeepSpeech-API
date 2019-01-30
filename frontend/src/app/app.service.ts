@@ -12,7 +12,7 @@ const httpOptions = {
 @Injectable()
 export class AppService {
   constructor(private httpClient: HttpClient ) { }
-  baseUrl: string = 'http://35.204.230.191:80/';
+  baseUrl: string = 'http://localhost:80/';
 
   save(blob: URL): Observable<{}>{
     return this.httpClient.post(this.baseUrl, blob, httpOptions).pipe(
