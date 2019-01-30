@@ -19,11 +19,11 @@ wget -O - https://github.com/mozilla/DeepSpeech/releases/download/v0.3.0/deepspe
 #### Runnning frontend
 
 ```
-$ [Frontend](https://github.com/AASHISHAG/DeepSpeech-API/tree/master/frontend)
+[Frontend](https://github.com/AASHISHAG/DeepSpeech-API/tree/master/frontend)
 ```
 
 ```
-$ [Backend](https://github.com/AASHISHAG/DeepSpeech-API/tree/master/backend)
+[Backend](https://github.com/AASHISHAG/DeepSpeech-API/tree/master/backend)
 ```
 
 ![alt text](https://github.com/AASHISHAG/DeepSpeech-API/blob/master/images/deepSpeech-api.JPG)
