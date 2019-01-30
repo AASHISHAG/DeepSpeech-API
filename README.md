@@ -1,3 +1,3 @@
 # DeepSpeech-API
 
-![alt text](https://github.com/AASHISHAG/DeepSpeech-API/blob/master/images/deepSpeech-api.jpg)
+![alt text](https://github.com/AASHISHAG/DeepSpeech-API/blob/master/images/deepSpeech-api.JPG)
