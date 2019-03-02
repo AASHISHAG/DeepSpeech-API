@@ -1,5 +1,5 @@
 import subprocess
-
+import uuid
 import scipy.io.wavfile
 from deepspeech import Model
 from flask import Flask
@@ -7,9 +7,9 @@ from flask import jsonify
 from flask import request
 from flask_cors import CORS, cross_origin
 
-BEAM_WIDTH = 500
-LM_WEIGHT = 1.50
-VALID_WORD_COUNT_WEIGHT = 2.25
+BEAM_WIDTH = 1024
+LM_WEIGHT = 0.75
+VALID_WORD_COUNT_WEIGHT = 1.85
 N_FEATURES = 26
 N_CONTEXT = 9
 MODEL_FILE = 'models/output_graph.pbmm'
@@ -27,14 +27,15 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 @app.route('/', methods=['POST'])
 @cross_origin()
 def post():
-    with open("file.wav", "wb") as vid:
+    fileName = 'file_'+str(uuid.uuid4())+'.wav'
+    with open(fileName, "wb") as vid:
         vid.write(request.data)
 
-    fs, audio = scipy.io.wavfile.read("file.wav")
+    fs, audio = scipy.io.wavfile.read(fileName)
     processed_data = ds.stt(audio, fs)
 
     # proc = subprocess.Popen(
-    #     "deepspeech --model models/output_graph.pbmm --alphabet models/alphabet.txt --lm models/lm.binary --trie models/trie --audio file.wav",
+    #     "deepspeech --model models/output_graph.pbmm --alphabet models/alphabet.txt --lm models/lm.binary --trie models/trie --audio fileName",
     #     shell=True, stdout=subprocess.PIPE, )
     # output = proc.communicate()[0]
     # print(output)
@@ -48,14 +49,15 @@ def post():
 @app.route('/file', methods=['POST'])
 @cross_origin()
 def post1():
-    with open("file.wav", "wb") as vid:
+    fileName = 'file_'+str(uuid.uuid4())+'.wav'
+    with open(fileName, "wb") as vid:
         vid.write(request.data)
 
-    fs, audio = scipy.io.wavfile.read("file.wav")
+    fs, audio = scipy.io.wavfile.read(fileName)
     processed_data = ds.stt(audio, fs)
 
     # proc = subprocess.Popen(
-    #     "deepspeech --model models/output_graph.pbmm --alphabet models/alphabet.txt --lm models/lm.binary --trie models/trie --audio file.wav",
+    #     "deepspeech --model models/output_graph.pbmm --alphabet models/alphabet.txt --lm models/lm.binary --trie models/trie --audio fileName",
     #     shell=True, stdout=subprocess.PIPE, )
     # output = proc.communicate()[0]
 
