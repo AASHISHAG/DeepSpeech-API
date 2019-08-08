@@ -21,5 +21,5 @@ apt-get install dependency_name
 #### Runnning the Server
 
 ```bash
-python server.py
+python3 server.py
 ```
