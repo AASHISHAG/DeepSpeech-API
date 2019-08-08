@@ -1,0 +1,22 @@
+python_speech_features
+tensorflow == 1.12.0
+progressbar2
+python-utils
+matplotlib
+setuptools
+flask_cors
+soundfile
+paramiko
+requests
+attrdict
+librosa
+tables
+pandas
+flask
+scipy
+numpy
+pyxdg
+wave
+sox
+bs4
+six
