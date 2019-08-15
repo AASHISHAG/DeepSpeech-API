@@ -15,7 +15,7 @@ pip3 install -r python_requirements.txt
 The important Linux dependencies can be found in linux_requirements.
 
 ```
-apt-get install dependency_name
+xargs -a linux_requirements.txt sudo apt-get install
 ```
 
 #### Runnning the Server
